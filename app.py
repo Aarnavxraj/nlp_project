@@ -29,5 +29,5 @@ if st.button("Predict"):
     cleaned = clean_text(user_input)
     vectorized = vectorizer.transform([cleaned])
     prediction = model.predict(vectorized)[0]
-    label = "🚨 SPAM" if prediction == 1 else "✅ NOT SPAM"
+    label = "🚨 SPAM" if prediction == 0 else "✅ NOT SPAM"
     st.subheader(f"Result: {label}")
